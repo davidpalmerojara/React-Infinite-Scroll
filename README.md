@@ -2,7 +2,7 @@
  <img src="https://raw.githubusercontent.com/PKief/vscode-material-icon-theme/ec559a9f6bfd399b82bb44393651661b08aaf7ba/icons/folder-markdown-open.svg" width="20%" alt="REACT-INFINITE-SCROLL-logo">
 </p>
 <p align="center">
-   [<h1 align="center">REACT-INFINITE-SCROLL</h1>]("https://react-infinite-scroll-lovat.vercel.app/")
+   <h1 align="center">REACT-INFINITE-SCROLL</h1>
 </p>
 <p align="center">
     <em><code>❯ React infinite scroll example</code></em>
