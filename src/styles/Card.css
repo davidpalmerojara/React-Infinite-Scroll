@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bad+Script&family=Pathway+Gothic+One&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+  font-family: ___; /* <= choose your own font */
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.75rem;
+}
+h4 {
+  font-size: 1.5rem;
+}
+h5 {
+  font-size: 1.25rem;
+}
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  margin: 0;
+}
+
+.card {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  animation: fadeIn 1s;
+  border-radius: 2px;
+}
+
+.cardHeader {
+  position: relative;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  z-index: 3;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.overlayImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.priceContainer {
+  height: 50%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  border-bottom-right-radius: 0;
+}
+
+.priceText {
+  font-family: "Pathway Gothic One", sans-serif;
+  font-size: 18px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.icon {
+  color: rgb(90, 90, 90);
+  padding: 5px;
+  background-color: white;
+  border-radius: 100%;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.icon:hover {
+  background-color: rgb(159, 240, 201);
+}
+
+.counter {
+  font-family: "Pathway Gothic One", sans-serif;
+  margin: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.overlayPrice {
+  width: 30%;
+  background: white;
+  height: 30%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip-path: polygon(100% 0, 0 0, 0 99%);
+}
+
+.img {
+  width: 100%;
+  display: block;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+
+.cardBody {
+  text-align: center;
+  padding: 15px;
+  padding-top: 10px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.cardTitle {
+  font-family: "Pathway Gothic One", sans-serif;
+  margin: 0;
+}
+
+.cardSubtitle {
+  font-family: "Bad Script", cursive;
+  margin: 0;
+}
+
+span {
+  color: darkgray;
+}
+
+.card-enter {
+  opacity: 0;
+}
+
+.card-enter-active {
+  opacity: 1;
+
+  transition: opacity 1000ms;
+}
+
+.card-exit {
+  opacity: 1;
+}
+
+.card-exit-active {
+  opacity: 0;
+
+  transition: opacity 1000ms;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
