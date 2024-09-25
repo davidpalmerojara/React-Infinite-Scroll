@@ -40,10 +40,7 @@ function App() {
 
       // Make GET request to get all of the images.
       const response = await fetch(
-        `http://localhost:3100/images?${new URLSearchParams({
-          page,
-          search: searchTerm,
-        })}`,
+        `https://fake-api-ruddy-ten.vercel.app/images`,
       );
       const data = await response.json();
       setCards((prev) => [...prev, ...data]);
