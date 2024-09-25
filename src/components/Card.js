@@ -9,14 +9,23 @@ import { GrRotateLeft } from 'react-icons/gr';
 
 function Card({ cardDetails }) {
   const [show, setShow] = useState(false);
+  const [likes, setLikes] = useState(cardDetails.likes_count);
+  const [isLiked, setIsLiked] = useState(false);
 
-  // Makes POST request to the API
-  const likeImage = (e) => {
-    e.preventDefault();
-    fetch(`http://localhost:3100/images/${cardDetails.id}/likes`, {
-      method: 'POST',
-      body: '',
-    }).catch((err) => console.log(err));
+  // Increase image likes when you click the like button
+  const likeImage = () => {
+    if (!isLiked) {
+      setLikes(likes + 1);
+      setIsLiked(true);
+    }
+  };
+
+  // Unlike image when you click the unlike button
+  const unlikeImage = () => {
+    if (isLiked) {
+      setLikes(likes - 1);
+      setIsLiked(false);
+    }
   };
 
   return (
@@ -38,11 +47,10 @@ function Card({ cardDetails }) {
             </div>
             <div className="buttons">
               <BiLike className="icon" onClick={likeImage} />
-              <p className="counter">
-                {cardDetails.likes_count.toString().padStart(3, '0')}
-              </p>
-              <GrRotateLeft className="icon" />
-              <p className="counter">001</p>
+              <p className="counter">{likes.toString().padStart(3, '0')}</p>
+              {isLiked && (
+                <GrRotateLeft className="icon" onClick={unlikeImage} />
+              )}
             </div>
           </div>
         </CSSTransition>
